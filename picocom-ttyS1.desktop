@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Picocom ttyS1
+Type=Application
+Comment=Terminal Emulator
+Comment[es]=Emulador de Terminal
+Comment[pl]=Emulator terminala
+Comment[pt]=Emulador de Terminal
+Comment[pt_BR]=Emulador de Terminal
+Comment[sv]=Terminalemulato
+Exec=su - -c 'picocom /dev/ttyS1'
+Terminal=true
+Icon=picocom.png
+Categories=TerminalEmulator;
+# vi: encoding=utf-8
