@@ -1,6 +1,5 @@
 # TODO:
 # - build documentation, don't take the included ones
-# - desktop and icon (maybe directly from minicom?)
 Summary:	TTY mode communications package ala Telix
 Summary(de):	TTY-Modus-Kommunikationspaket (Дhnlich Telix)
 Summary(es):	Paquete de comunicaciones modo texto a la Telix
@@ -14,13 +13,14 @@ Summary(uk):	Комун╕кац╕йний пакет типу Telix для текстового режиму
 Summary(zh_CN):	р╩╦Жнд╠╬╫ГцФ╣д╣Вйт╫Б╣ВфВ©ьжффВ╨мжу╤кдёдБфВ║ё
 Name:		picocom
 Version:	1.4
-Release:	0.1
+Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://efault.net/npat/hacks/picocom/dist/%{name}-%{version}.tar.gz
 # Source0-md5:	08fcc5f6bb9e7676a2569386d5ea9f70
-#Source1:	%{name}.desktop
-#Source2:	%{name}.png
+Source1:	%{name}-ttyS0.desktop
+Source2:	%{name}-ttyS1.desktop
+Source3:	%{name}.png
 URL:		http://efault.net/npat/hacks/picocom/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -74,8 +74,9 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8} \
 install picocom pcxm pczm pcasc pcym $RPM_BUILD_ROOT%{_bindir}
 install picocom.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-#install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -84,6 +85,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES CONTRIBUTORS NEWS README *.html *.ps
 %attr(755,root,root) %{_bindir}/*
-#%{_desktopdir}/*.desktop
-#%{_pixmapsdir}/*
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*
 %{_mandir}/man8/*.8*
