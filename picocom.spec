@@ -1,5 +1,6 @@
 # TODO:
 # - build documentation, don't take the included ones
+# - use included apps for transfer and recving files
 Summary:	TTY mode communications package ala Telix
 Summary(de):	TTY-Modus-Kommunikationspaket (ähnlich Telix)
 Summary(es):	Paquete de comunicaciones modo texto a la Telix
@@ -13,7 +14,7 @@ Summary(uk):	ëÏÍÕÎ¦ËÁÃ¦ÊÎÉÊ ĞÁËÅÔ ÔÉĞÕ Telix ÄÌÑ ÔÅËÓÔÏ×ÏÇÏ ÒÅÖÉÍÕ
 Summary(zh_CN):	Ò»¸öÎÄ±¾½çÃæµÄµ÷ÊÔ½âµ÷Æ÷¿ØÖÆÆ÷ºÍÖÕ¶ËÄ£ÄâÆ÷¡£
 Name:		picocom
 Version:	1.4
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://efault.net/npat/hacks/picocom/dist/%{name}-%{version}.tar.gz
@@ -21,6 +22,7 @@ Source0:	http://efault.net/npat/hacks/picocom/dist/%{name}-%{version}.tar.gz
 Source1:	%{name}-ttyS0.desktop
 Source2:	%{name}-ttyS1.desktop
 Source3:	%{name}.png
+Patch0:		%{name}-ascii_xfr.patch
 URL:		http://efault.net/npat/hacks/picocom/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -59,6 +61,7 @@ bezpieczniejszy (choæ o nieco mniejszych mo¿liwo¶ciach) interfejs.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
