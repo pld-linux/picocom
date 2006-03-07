@@ -1,5 +1,4 @@
 # TODO:
-# - build documentation, don't take the included ones
 # - use included apps for transfer and recving files
 Summary:	TTY mode communications package ala Telix
 Summary(de):	TTY-Modus-Kommunikationspaket (ähnlich Telix)
@@ -24,6 +23,8 @@ Source2:	%{name}-ttyS1.desktop
 Source3:	%{name}.png
 Patch0:		%{name}-ascii_xfr.patch
 URL:		http://efault.net/npat/hacks/picocom/
+BuildRequires:	groff
+BuildRequires:	xmlmp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -68,6 +69,9 @@ bezpieczniejszy (choæ o nieco mniejszych mo¿liwo¶ciach) interfejs.
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -Wall" \
 	LDFLAGS="%{rpmldflags}"
+
+rm -rf picocom.8 picocom.8.html picocom.8.ps
+%{__make} picocom.8 picocom.8.html picocom.8.ps
 
 %install
 rm -rf $RPM_BUILD_ROOT
