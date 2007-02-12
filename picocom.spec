@@ -1,16 +1,16 @@
 # TODO:
 # - use included apps for transfer and recving files
 Summary:	TTY mode communications package ala Telix
-Summary(de):	TTY-Modus-Kommunikationspaket (ähnlich Telix)
-Summary(es):	Paquete de comunicaciones modo texto a la Telix
-Summary(fi):	Tietoliikenneohjelma, kuten Telix
-Summary(fr):	Package de communication en mode terminal à la Telix
-Summary(pl):	Program komunikacyjny (podobny do Teliksa)
-Summary(pt_BR):	Pacote de comunicações modo texto a la Telix
-Summary(ru):	ëÏÍÍÕÎÉËÁÃÉÏÎÎÙÊ ĞÁËÅÔ ÔÉĞÁ Telix ÄÌÑ ÔÅËÓÔÏ×ÏÇÏ ÒÅÖÉÍÁ
-Summary(tr):	Telix benzeri, TTY kipi iletişim paketi
-Summary(uk):	ëÏÍÕÎ¦ËÁÃ¦ÊÎÉÊ ĞÁËÅÔ ÔÉĞÕ Telix ÄÌÑ ÔÅËÓÔÏ×ÏÇÏ ÒÅÖÉÍÕ
-Summary(zh_CN):	Ò»¸öÎÄ±¾½çÃæµÄµ÷ÊÔ½âµ÷Æ÷¿ØÖÆÆ÷ºÍÖÕ¶ËÄ£ÄâÆ÷¡£
+Summary(de.UTF-8):   TTY-Modus-Kommunikationspaket (Ã¤hnlich Telix)
+Summary(es.UTF-8):   Paquete de comunicaciones modo texto a la Telix
+Summary(fi.UTF-8):   Tietoliikenneohjelma, kuten Telix
+Summary(fr.UTF-8):   Package de communication en mode terminal Ã  la Telix
+Summary(pl.UTF-8):   Program komunikacyjny (podobny do Teliksa)
+Summary(pt_BR.UTF-8):   Pacote de comunicaÃ§Ãµes modo texto a la Telix
+Summary(ru.UTF-8):   ĞšĞ¾Ğ¼Ğ¼ÑƒĞ½Ğ¸ĞºĞ°Ñ†Ğ¸Ğ¾Ğ½Ğ½Ñ‹Ğ¹ Ğ¿Ğ°ĞºĞµÑ‚ Ñ‚Ğ¸Ğ¿Ğ° Telix Ğ´Ğ»Ñ Ñ‚ĞµĞºÑÑ‚Ğ¾Ğ²Ğ¾Ğ³Ğ¾ Ñ€ĞµĞ¶Ğ¸Ğ¼Ğ°
+Summary(tr.UTF-8):   Telix benzeri, TTY kipi iletiÅŸim paketi
+Summary(uk.UTF-8):   ĞšĞ¾Ğ¼ÑƒĞ½Ñ–ĞºĞ°Ñ†Ñ–Ğ¹Ğ½Ğ¸Ğ¹ Ğ¿Ğ°ĞºĞµÑ‚ Ñ‚Ğ¸Ğ¿Ñƒ Telix Ğ´Ğ»Ñ Ñ‚ĞµĞºÑÑ‚Ğ¾Ğ²Ğ¾Ğ³Ğ¾ Ñ€ĞµĞ¶Ğ¸Ğ¼Ñƒ
+Summary(zh_CN.UTF-8):   ä¸€ä¸ªæ–‡æœ¬ç•Œé¢çš„è°ƒè¯•è§£è°ƒå™¨æ§åˆ¶å™¨å’Œç»ˆç«¯æ¨¡æ‹Ÿå™¨ã€‚
 Name:		picocom
 Version:	1.4
 Release:	2
@@ -43,22 +43,22 @@ terminal-management library, which could serve other projects as well.
 This library hides the termios(3) calls, and provides a less complex
 and safer (though certainly less feature-rich) interface.
 
-%description -l pl
+%description -l pl.UTF-8
 Jak sama nazwa sugeruje picocom to minimalny program do emulacji
 prymitywnego terminala "dumb". Jest bardzo podobny do minicoma, ale
-jest "pico" zamiast "mini". Zosta³ zaprojektowany aby s³u¿yæ za prosty
-program do rêcznej konfiguracji i testów modemów oraz narzêdzie do
-rozwi±zywania problemów. S³u¿y³ te¿ (dosyæ dobrze) jako "okno
-terminala" umo¿liwiajace administratorowi interweniowanie w skryptach
-po³±czeñ PPP (co¶ w rodzaju "otwórz okno terminala przed / po
-dzwonieniu" z MS Windows). Mo¿e siê okazaæ przydatny tak¿e przy innych
-podobnych zadaniach. Jest idealny dla systemów wbudowanych, jako ¿e ma
-bardzo ma³y narzut pamiêciowy (poni¿ej 20kB po zestripowaniu). Oprócz
-bycia ma³ym przydatnym narzêdziem, picocom w swoich ¼ród³ach zawiera
-prost±, ³atw± w u¿yciu i obszernie udokumentowan± bibliotekê
-zarz±dzania terminalem, mog±c± s³u¿yæ tak¿e innym projektom.
-Biblioteka ta ukrywa wywo³ania termios(3) i udostêpnia mniej z³o¿ony i
-bezpieczniejszy (choæ o nieco mniejszych mo¿liwo¶ciach) interfejs.
+jest "pico" zamiast "mini". ZostaÅ‚ zaprojektowany aby sÅ‚uÅ¼yÄ‡ za prosty
+program do rÄ™cznej konfiguracji i testÃ³w modemÃ³w oraz narzÄ™dzie do
+rozwiÄ…zywania problemÃ³w. SÅ‚uÅ¼yÅ‚ teÅ¼ (dosyÄ‡ dobrze) jako "okno
+terminala" umoÅ¼liwiajace administratorowi interweniowanie w skryptach
+poÅ‚Ä…czeÅ„ PPP (coÅ› w rodzaju "otwÃ³rz okno terminala przed / po
+dzwonieniu" z MS Windows). MoÅ¼e siÄ™ okazaÄ‡ przydatny takÅ¼e przy innych
+podobnych zadaniach. Jest idealny dla systemÃ³w wbudowanych, jako Å¼e ma
+bardzo maÅ‚y narzut pamiÄ™ciowy (poniÅ¼ej 20kB po zestripowaniu). OprÃ³cz
+bycia maÅ‚ym przydatnym narzÄ™dziem, picocom w swoich ÅºrÃ³dÅ‚ach zawiera
+prostÄ…, Å‚atwÄ… w uÅ¼yciu i obszernie udokumentowanÄ… bibliotekÄ™
+zarzÄ…dzania terminalem, mogÄ…cÄ… sÅ‚uÅ¼yÄ‡ takÅ¼e innym projektom.
+Biblioteka ta ukrywa wywoÅ‚ania termios(3) i udostÄ™pnia mniej zÅ‚oÅ¼ony i
+bezpieczniejszy (choÄ‡ o nieco mniejszych moÅ¼liwoÅ›ciach) interfejs.
 
 %prep
 %setup -q
