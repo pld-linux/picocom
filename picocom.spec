@@ -1,16 +1,16 @@
 # TODO:
 # - use included apps for transfer and recving files
 Summary:	TTY mode communications package ala Telix
-Summary(de.UTF-8):   TTY-Modus-Kommunikationspaket (ähnlich Telix)
-Summary(es.UTF-8):   Paquete de comunicaciones modo texto a la Telix
-Summary(fi.UTF-8):   Tietoliikenneohjelma, kuten Telix
-Summary(fr.UTF-8):   Package de communication en mode terminal à la Telix
-Summary(pl.UTF-8):   Program komunikacyjny (podobny do Teliksa)
-Summary(pt_BR.UTF-8):   Pacote de comunicações modo texto a la Telix
-Summary(ru.UTF-8):   Коммуникационный пакет типа Telix для текстового режима
-Summary(tr.UTF-8):   Telix benzeri, TTY kipi iletişim paketi
-Summary(uk.UTF-8):   Комунікаційний пакет типу Telix для текстового режиму
-Summary(zh_CN.UTF-8):   一个文本界面的调试解调器控制器和终端模拟器。
+Summary(de.UTF-8):	TTY-Modus-Kommunikationspaket (ähnlich Telix)
+Summary(es.UTF-8):	Paquete de comunicaciones modo texto a la Telix
+Summary(fi.UTF-8):	Tietoliikenneohjelma, kuten Telix
+Summary(fr.UTF-8):	Package de communication en mode terminal à la Telix
+Summary(pl.UTF-8):	Program komunikacyjny (podobny do Teliksa)
+Summary(pt_BR.UTF-8):	Pacote de comunicações modo texto a la Telix
+Summary(ru.UTF-8):	Коммуникационный пакет типа Telix для текстового режима
+Summary(tr.UTF-8):	Telix benzeri, TTY kipi iletişim paketi
+Summary(uk.UTF-8):	Комунікаційний пакет типу Telix для текстового режиму
+Summary(zh_CN.UTF-8):	一个文本界面的调试解调器控制器和终端模拟器。
 Name:		picocom
 Version:	1.4
 Release:	2
