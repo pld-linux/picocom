@@ -13,7 +13,7 @@ Summary(uk.UTF-8):	Комунікаційний пакет типу Telix для
 Summary(zh_CN.UTF-8):	一个文本界面的调试解调器控制器和终端模拟器。
 Name:		picocom
 Version:	1.4
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	http://efault.net/npat/hacks/picocom/dist/%{name}-%{version}.tar.gz
@@ -24,7 +24,6 @@ Source3:	%{name}.png
 Patch0:		%{name}-ascii_xfr.patch
 URL:		http://efault.net/npat/hacks/picocom/
 BuildRequires:	groff
-BuildRequires:	xmlmp
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,9 +68,6 @@ bezpieczniejszy (choć o nieco mniejszych możliwościach) interfejs.
 	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -Wall" \
 	LDFLAGS="%{rpmldflags}"
-
-rm -rf picocom.8 picocom.8.html picocom.8.ps
-%{__make} picocom.8 picocom.8.html picocom.8.ps
 
 %install
 rm -rf $RPM_BUILD_ROOT
