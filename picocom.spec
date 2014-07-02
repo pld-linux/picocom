@@ -12,17 +12,16 @@ Summary(tr.UTF-8):	Telix benzeri, TTY kipi iletişim paketi
 Summary(uk.UTF-8):	Комунікаційний пакет типу Telix для текстового режиму
 Summary(zh_CN.UTF-8):	一个文本界面的调试解调器控制器和终端模拟器。
 Name:		picocom
-Version:	1.4
-Release:	3
+Version:	1.7
+Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
-Source0:	http://efault.net/npat/hacks/picocom/dist/%{name}-%{version}.tar.gz
-# Source0-md5:	08fcc5f6bb9e7676a2569386d5ea9f70
+Source0:	https://picocom.googlecode.com/files/%{name}-%{version}.tar.gz
+# Source0-md5:	8eaba1d31407e8408674d6e57af447ef
 Source1:	%{name}-ttyS0.desktop
 Source2:	%{name}-ttyS1.desktop
 Source3:	%{name}.png
-Patch0:		%{name}-ascii_xfr.patch
-URL:		http://efault.net/npat/hacks/picocom/
+URL:		https://code.google.com/p/picocom/
 BuildRequires:	groff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -61,7 +60,6 @@ bezpieczniejszy (choć o nieco mniejszych możliwościach) interfejs.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__make} \
@@ -86,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CONTRIBUTORS NEWS README *.html *.ps
+%doc CHANGES CONTRIBUTORS README *.html *.ps
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
