@@ -12,16 +12,16 @@ Summary(tr.UTF-8):	Telix benzeri, TTY kipi iletişim paketi
 Summary(uk.UTF-8):	Комунікаційний пакет типу Telix для текстового режиму
 Summary(zh_CN.UTF-8):	一个文本界面的调试解调器控制器和终端模拟器。
 Name:		picocom
-Version:	1.7
+Version:	2.1
 Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
-Source0:	https://picocom.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	8eaba1d31407e8408674d6e57af447ef
+Source0:	https://github.com/npat-efault/picocom/archive/%{version}.tar.gz
+# Source0-md5:	7cae1424c1279f0f13dee5dcb3de3f45
 Source1:	%{name}-ttyS0.desktop
 Source2:	%{name}-ttyS1.desktop
 Source3:	%{name}.png
-URL:		https://code.google.com/p/picocom/
+URL:		https://github.com/npat-efault/picocom
 BuildRequires:	groff
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,28 +64,32 @@ bezpieczniejszy (choć o nieco mniejszych możliwościach) interfejs.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -Wall" \
+	CFLAGS="%{rpmcflags} %{rpmcppflags} -Wall" \
 	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
 	$RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-install picocom pcxm pczm pcasc pcym $RPM_BUILD_ROOT%{_bindir}
-install picocom.8 $RPM_BUILD_ROOT%{_mandir}/man8
+cp -p picocom pcxm pczm pcasc pcym $RPM_BUILD_ROOT%{_bindir}
+cp -p picocom.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
-install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}
+cp -p %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+cp -p %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
+cp -p %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES CONTRIBUTORS README *.html *.ps
-%attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/*.desktop
-%{_pixmapsdir}/*
-%{_mandir}/man8/*.8*
+%doc CONTRIBUTORS README.md TODO
+%attr(755,root,root) %{_bindir}/pcasc
+%attr(755,root,root) %{_bindir}/pcxm
+%attr(755,root,root) %{_bindir}/pcym
+%attr(755,root,root) %{_bindir}/pczm
+%attr(755,root,root) %{_bindir}/picocom
+%{_desktopdir}/picocom*.desktop
+%{_pixmapsdir}/picocom.png
+%{_mandir}/man1/picocom.1*
