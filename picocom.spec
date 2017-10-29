@@ -12,12 +12,12 @@ Summary(tr.UTF-8):	Telix benzeri, TTY kipi iletişim paketi
 Summary(uk.UTF-8):	Комунікаційний пакет типу Telix для текстового режиму
 Summary(zh_CN.UTF-8):	一个文本界面的调试解调器控制器和终端模拟器。
 Name:		picocom
-Version:	2.1
+Version:	2.2
 Release:	1
 License:	GPL v2+
 Group:		Applications/Communications
 Source0:	https://github.com/npat-efault/picocom/archive/%{version}.tar.gz
-# Source0-md5:	7cae1424c1279f0f13dee5dcb3de3f45
+# Source0-md5:	65da5cd32f8cfa456bbe79bbcc908daf
 Source1:	%{name}-ttyS0.desktop
 Source2:	%{name}-ttyS1.desktop
 Source3:	%{name}.png
